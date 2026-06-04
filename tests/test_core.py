@@ -76,8 +76,10 @@ class TestEmissionPredictor(unittest.TestCase):
     def setUp(self):
         self.pred = EmissionPredictor()
         for i in range(24):
+            month = (i % 12) + 1
+            day = 1  # any valid day
             self.pred.add_record(HistoricalRecord(
-                date=f"2023-{(i % 12) + 1:02d}",
+                date=f"2023-{month:02d}-{day:02d}",
                 co2e_kg=50000 + (i * 200) + (i % 12) * 1000,
             ))
 
