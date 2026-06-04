@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "building-carbon-ai"
+version = "1.0.0"
+description = "AI 建筑碳管理平台 — 碳排放计算、预测与减排路径优化"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Building Carbon AI Team"},
+]
+keywords = [
+    "carbon", "emissions", "building", "sustainability",
+    "ESG", "green-building", "carbon-neutral",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Environmental Science",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.104",
+    "uvicorn[standard]>=0.24",
+    "pydantic>=2.0",
+    "streamlit>=1.28",
+    "pandas>=2.0",
+    "plotly>=5.18",
+]
+
+[project.urls]
+Homepage = "https://github.com/c50346867/building-carbon-ai"
+Repository = "https://github.com/c50346867/building-carbon-ai"
+Issues = "https://github.com/c50346867/building-carbon-ai/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1",
+    "mypy>=1.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["backend*", "frontend*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

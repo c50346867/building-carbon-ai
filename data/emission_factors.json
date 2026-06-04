@@ -1,0 +1,151 @@
+{
+  "__meta__": {
+    "description": "中国建筑碳排放因子数据库 (参考 GB/T 51366-2019 及 IPCC 指南)",
+    "version": "1.0.0",
+    "updated": "2025-01",
+    "source": "国家标准 GB/T 51366-2019 / IPCC 国家温室气体清单指南"
+  },
+  "electricity": {
+    "description": "外购电力排放因子 (kg CO₂/kWh) — 中国区域电网基准线排放因子",
+    "region_factors": {
+      "华北": 0.8843,
+      "东北": 0.7769,
+      "华东": 0.7035,
+      "华中": 0.5915,
+      "西北": 0.6666,
+      "南方": 0.5267,
+      "西南": 0.3875
+    },
+    "national_average": 0.6101,
+    "unit": "kg CO₂/kWh",
+    "note": "参考生态环境部 2024 年区域电网排放因子"
+  },
+  "natural_gas": {
+    "factor": 2.165,
+    "unit": "kg CO₂/m³",
+    "description": "天然气燃烧排放因子",
+    "source": "GB/T 51366-2019 附录 A"
+  },
+  "diesel": {
+    "factor": 3.186,
+    "unit": "kg CO₂/kg",
+    "description": "柴油燃烧排放因子",
+    "source": "GB/T 51366-2019 附录 A"
+  },
+  "gasoline": {
+    "factor": 3.07,
+    "unit": "kg CO₂/kg",
+    "description": "汽油燃烧排放因子"
+  },
+  "lpg": {
+    "factor": 3.101,
+    "unit": "kg CO₂/kg",
+    "description": "液化石油气排放因子"
+  },
+  "coal": {
+    "factor": 2.689,
+    "unit": "kg CO₂/kg",
+    "description": "原煤燃烧排放因子 (标准煤)"
+  },
+  "heat": {
+    "factor": 0.11,
+    "unit": "kg CO₂/MJ",
+    "description": "外购热力排放因子"
+  },
+  "water": {
+    "factor": 0.344,
+    "unit": "kg CO₂/m³",
+    "description": "自来水排放因子 (含处理/运输)"
+  },
+  "wastewater": {
+    "factor": 0.25,
+    "unit": "kg CO₂/m³",
+    "description": "污水处理排放因子"
+  },
+  "refrigerant_r410a": {
+    "gwp": 2088,
+    "unit": "kg CO₂e/kg",
+    "description": "R410A 制冷剂 GWP (IPCC AR6)",
+    "typical_leak_rate": 0.05
+  },
+  "refrigerant_r134a": {
+    "gwp": 1430,
+    "unit": "kg CO₂e/kg",
+    "description": "R134A 制冷剂 GWP (IPCC AR6)",
+    "typical_leak_rate": 0.03
+  },
+  "refrigerant_r32": {
+    "gwp": 675,
+    "unit": "kg CO₂e/kg",
+    "description": "R32 制冷剂 GWP (IPCC AR6)",
+    "typical_leak_rate": 0.04
+  },
+  "materials": {
+    "cement": {
+      "factor": 0.735,
+      "unit": "t CO₂/t",
+      "description": "水泥生产排放因子"
+    },
+    "steel_rebar": {
+      "factor": 2.31,
+      "unit": "t CO₂/t",
+      "description": "钢筋生产排放因子"
+    },
+    "aluminum": {
+      "factor": 16.49,
+      "unit": "t CO₂/t",
+      "description": "电解铝排放因子"
+    },
+    "glass_float": {
+      "factor": 0.86,
+      "unit": "t CO₂/t",
+      "description": "浮法玻璃排放因子"
+    }
+  },
+  "transportation": {
+    "passenger_car_gasoline": {
+      "factor": 0.192,
+      "unit": "kg CO₂/km",
+      "description": "汽油乘用车单车排放"
+    },
+    "passenger_car_diesel": {
+      "factor": 0.171,
+      "unit": "kg CO₂/km",
+      "description": "柴油乘用车单车排放"
+    },
+    "bus_diesel": {
+      "factor": 1.12,
+      "unit": "kg CO₂/km",
+      "description": "柴油公交排放"
+    },
+    "subway": {
+      "factor": 0.033,
+      "unit": "kg CO₂/km",
+      "description": "地铁人均排放 (含电力)"
+    }
+  },
+  "waste": {
+    "municipal_solid_waste": {
+      "factor": 0.6,
+      "unit": "t CO₂/t",
+      "description": "生活垃圾焚烧排放"
+    },
+    "food_waste_landfill": {
+      "factor": 0.85,
+      "unit": "t CO₂e/t",
+      "description": "厨余垃圾填埋 (含甲烷)"
+    }
+  },
+  "green_sink": {
+    "tree": {
+      "factor": 22.6,
+      "unit": "kg CO₂/棵/年",
+      "description": "每棵树年均碳汇量"
+    },
+    "green_roof": {
+      "factor": 2.5,
+      "unit": "kg CO₂/m²/年",
+      "description": "屋顶绿化碳汇"
+    }
+  }
+}
