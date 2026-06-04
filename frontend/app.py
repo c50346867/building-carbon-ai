@@ -370,7 +370,7 @@ with st.spinner("正在生��预测..."):
     pred = EmissionPredictor()
     for _, row in df.iterrows():
         pred.add_record(HistoricalRecord(
-            date=row["date"],
+            date=row["date"] + "-01",
             co2e_kg=row["co2e_kg"],
             electricity_kwh=row["electricity_kwh"],
             gas_m3=row["gas_m3"],

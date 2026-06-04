@@ -72,7 +72,7 @@ def demo_predictor():
     pred = EmissionPredictor()
     for dp in sim.data:
         pred.add_record(HistoricalRecord(
-            date=f"{dp.year}-{dp.month:02d}",
+            date=f"{dp.year}-{dp.month:02d}-01",
             co2e_kg=dp.co2e_kg,
             electricity_kwh=dp.electricity_kwh,
             gas_m3=dp.gas_m3,

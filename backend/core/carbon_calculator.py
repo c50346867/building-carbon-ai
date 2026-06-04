@@ -35,6 +35,7 @@ class EmissionResult:
     factor: float
     co2e_kg: float
     category: str = ""
+    unit: str = ""
 
 
 @dataclass
@@ -95,6 +96,7 @@ class CarbonCalculator:
                 factor=factor,
                 co2e_kg=round(co2e, 4),
                 category=src.category,
+                unit=src.unit,
             )
             report.results.append(result)
 

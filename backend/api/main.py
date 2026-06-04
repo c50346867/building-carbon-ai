@@ -183,7 +183,7 @@ def forecast(periods: int = Query(12, description="预测期数"), period_type: 
         sim.simulate()
         for dp in sim.data:
             predictor.add_record(HR(
-                date=f"{dp.year}-{dp.month:02d}",
+                date=f"{dp.year}-{dp.month:02d}-01",
                 co2e_kg=dp.co2e_kg,
                 electricity_kwh=dp.electricity_kwh,
                 gas_m3=dp.gas_m3,
